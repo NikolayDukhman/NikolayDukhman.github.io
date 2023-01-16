@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Massively</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">January 15, 2023</span>
+									<h1>Table creation</h1></header>
+									
+									<p>This code creates a series of tables in a PostgreSQL database. The SQL commands used are CREATE TABLE IF NOT EXISTS, which will create a new table with the specified name and structure if it does not already exist in the database. The tables created in this code snippet are:</p>
+									<div class="image main"><img src="images/erd2.png" alt="" /></div>
+										
+										<ul>										
+											<li><b>dimCompany</b>: This table contains information about companies, including a unique ID, the company name, and the company URL.</li>
+											<li><b>dimDate</b>: This table contains information about dates, including a unique ID, the date, the day, the month ID, the year ID, the weekday ID, and the quarter ID.</li>
+											<li><b>dimExperience</b>: This table contains information about job experience requirements, including a unique ID and the experience required.</li>
+											<li><b>dimListing_dimSubcategories</b>: This table is a join table linking the dimListing and dimSubcategories tables.</li>
+											<li><b>dimLocation</b>: This table contains information about locations, including a unique ID, the location name, the city, and the country.</li>
+											<li><b>dimMonth</b>: This table contains information about months, including the month ID and the month name.</li>
+											<li><b>dimPositionType</b>: This table contains information about job position types, including a unique ID and the position type.</li>
+											<li><b>dimQuarter</b>: This table contains information about quarters, including the quarter ID and the quarter name.</li>
+											<li><b>dimSource</b>: This table contains information about sources, including a unique ID, the source name, and the source URL.</li>
+											<li><b>dimSubcategories</b>: This table contains information about subcategories, including the subcategory ID, the category ID</li>
+										</ul>
+									This code is creating a series of tables in a PostgreSQL database using the SQL CREATE TABLE statement. Each table has a specific set of columns with designated data types, primary keys, and constraints.</br>
+										The first table, <b>dimCompany</b> has columns for a <u>company's id</u>, <u>name</u>, and <u>url</u>. The primary key is the <u>company_id</u> column and there is also a unique constraint on the url column. This ensures that there will be no duplicate urls in the table.</br>										
+										The next table, <b>dimDate</b> has columns for the <u>date's id</u>, <u>date</u>, <u>day</u>, <u>month</u>, <u>year</u>, <u>weekday</u> and <u>quarter</u>. The primary key is the <u>date_id</u> column, and there is also a unique constraint on the date column. This ensures that there will be no duplicate dates in the table.</br>										
+										The <b>dimExperience</b> table has columns for the <u>experience_required_id</u>, and <u>experience</u>. The primary key is the <u>experience_required_id</u> column, and there is also a unique constraint on the <u>experience</u> column. This ensures that there will be no duplicate experience in the table.</br>										
+										The <b>dimListing_dimSubcategories</b> table is a many-to-many relationship table between "dimListing" and "dimSubcategories" table.</br>										
+										The <b>dimLocation</b> table has columns for the <u>location_id</u>, <u>name</u>, <u>city</u>, and <u>country</u>. The primary key is the location_id column, and there is also a unique constraint on the <u>name</u> column. This ensures that there will be no duplicate location names in the table.</br>										
+										The <b>dimMonth</b> table has columns for the <u>month_id</u>, and <u>name</u>. The primary key is <u>the month_id</u> column.</br>										
+										The <b>dimPositionType</b> table has columns for the <u>type_id</u>, and <u>position_type</u>. The primary key is the type_id</u> column.</br>										
+										The <b>dimQuarter</b> table has columns for the <u>quarter_id</u>, and <u>name</u>. The primary key is the <u>quarter_id</u> column.</br>										
+										The <b>dimSource</b> table has columns for the <u>source_id</u>, <u>name</u>, and <u>url</u>. The primary key is the <u>source_id column</u>.</br>									
+										The <b>dimSubcategories</b> table has columns for the <u>subcat_id</u>, <u>category_id</u>, <u>name</u>, and <u>url</u>. The primary key is the <u>subcat_id column</u>.</br>										
+										And finally, the <b>factListing</b> table has columns for the <u>listing_id</u>, <u>location_id</u>, <u>company_id</u>, <u>experience_required_id</u>, <u>type_id</u>, <u>date_id</u>, title, salary, and source_id. The primary key is the listing_id column.</br>										
+										<p>This code can be used to create a data warehouse, where the factListing table serves as a central fact table, and all other tables are dimension tables. This structure will enable efficient querying and analysis of the data.</p>
+															
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Israel</p>
+							</section>
+	
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">nikolay.duhman@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+		
+									<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

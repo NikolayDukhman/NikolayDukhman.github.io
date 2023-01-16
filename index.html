@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Nikolay Dukhman Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Nikolay Dukhman<br />
+						Portfolio</h1>
+						<p>Data analyst skilled in SQL, Tableu and Python</a>.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis" class="logo">View Project</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">This is Massively</a></li>
+							<li><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis">Israeli Job Market <br />
+										analysis</a></h2>
+									<p>It this project we'll gather data from one of the largest job posting sites in Israel. We'll 
+										then transform the data and load it into our database. From  there we will issue some SQL queries
+										to gather some valuable insights. We will also use the gathered data to create charts and visualisations
+										using BI software. 
+									</p>
+								</header>
+
+								<a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis" class="image main"><img src="images/main.jpg" alt="" /></a>
+  
+								<ul class="actions special">
+									<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis" class="button large">View Project</a></li>
+								</ul>
+							</article>
+
+						<!-- Posts -->
+						
+							<section class="posts">
+
+								<article>
+									<header>
+										<h2><a href="#">Database design</a></h2>
+									</header>
+									<a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/postgres/createTables.sql" class="image fit"><img src="images/star.jpg" alt="" /></a>
+									<p>First of all we have to think about our database design, dimensional and fact tables we want to see in our database and relations beween the tables. 
+										Here we will design our database, create tables and relations between them. The database will follow the Star design pattern. <a href ="sql.html">Read more</a></p>
+									<ul class="actions special">
+										<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/postgres/createTables.sql" class="button">View Code</a></li>
+									</ul>
+								</article>
+
+								<article>
+									<header>
+										<h2><a href="#">Extract</a></h2>
+									</header>
+									<a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/extract/extract.py" class="image fit"><img src="images/extract.jpg" alt="" /></a>
+									<p>We will then extract raw data from our source using Python libraries like Selenium and BeautifulSoup to achieve our goal. The information will be and stored in CSV files. We start with extracting categories and sub-categories and proceed with getting listings information. <a href ='extract.html'><u>Read more</u></a></u></p>
+									<ul class="actions special">
+										<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/extract/extract.py" class="button">View Code</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">Transform</a></h2>
+									</header>
+									<a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/transform/transform.py" class="image fit"><img src="images/transform.jpg" alt="" /></a>
+									<p>At this step of the process we will transform the data we have in the CSV files. To make it ready for the relational database we'll need to normalize the data.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/transform/transform.py" class="button">View Code</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/load/load.py">Load</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/erd.jpg" alt="" /></a>
+									<p>In this part of the project we will load all the data we cleaned and prepared during previous steps into our PostgreSQL database.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/load/load.py" class="button">View Code</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">SQL queries</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/sql.jpg" alt="" /></a>
+									<p>Here we will create some SQL queries to gather interesting facts about our data.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">Data visualization</a></h2>
+									</header>
+									<a href="https://public.tableau.com/app/profile/nikolay.dukhman/viz/IsraeliJobmarket/Story2" class="image fit"><img src="images/visualization.jpg" alt="" /></a>
+									<p>Data visualization with Tableau Public. We will visualize the following date: Vacancies by location, Job openings by Category, Top 20 hiring companies, Experience required in IT by Category.</p>
+									<ul class="actions special">
+										<li><a href="https://public.tableau.com/app/profile/nikolay.dukhman/viz/IsraeliJobmarket/Story2" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<h2><a href="#">Conclusion</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/conclusion.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Read more</a></li>
+									</ul>
+								</article>
+							</section>
+
+						<!-- Footer -->
+							
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<p>Photo by <a href="https://unsplash.com/es/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/photos/7iSEHWsxPLw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+						<p>Photo by <a href="https://unsplash.com/es/@purzlbaum?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Claudio Schwarz</a> on <a href="https://unsplash.com/photos/fyeOxvYvIyY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>>
+						<p>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/photos/Skf7HxARcoc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+						<p>Photo by <a href="https://unsplash.com/es/@rubaitulazad?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Rubaitul Azad</a> on <a href="https://unsplash.com/photos/Y9kOsyoWyaU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+						<p>Photo by <a href="https://unsplash.com/es/@pathdigital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">path digital</a> on <a href="https://unsplash.com/photos/tR0jvlsmCuQ?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+						<p>Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne Girardet</a> on <a href="https://unsplash.com/photos/EP6_VZhzXM8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+						<p>Photo by <a href="https://unsplash.com/@mikekilcoyne?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mike Kilcoyne</a> on <a href="https://unsplash.com/images/nature/star?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

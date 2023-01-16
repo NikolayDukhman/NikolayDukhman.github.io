@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Massively</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">January 15, 2023</span>
+									<h1>Scraping data</h1></header>
+                                    <h3>Getting list of categories and sub-categories</h3>
+									
+									<p><a href ='https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/extract/getCategories.py'><u>This code</u></a> is a web scraping script that is used to extract information about job categories and subcategories from the website "drushim.co.il". The script uses the Python library BeautifulSoup to parse the HTML of the website and extract the relevant information.</p>
+
+                                    <p>The script starts by making a GET request to the website's "categories.aspx" page, which contains a list of all the main job categories. The script then uses BeautifulSoup to find all the elements on the page with the class "flex cat-list", which correspond to the main categories.</p>
+                                        
+                                    <p>For each main category, the script extracts the category's ID, name, and link, and writes this information to a CSV file called "main_categories.csv". The script also finds all the subcategories of the main category and writes information about each subcategory to a CSV file called "subcategories.csv"</p>
+                                        
+                                    <p>The script uses two CSV files, one for main categories and another for subcategories. The script starts by creating and opening the file "main_categories.csv" in write mode and write the header of the csv file, then the script loops through each category in the categories list and extract the id, internal id, name and link of the category and writes it to the csv file.</p>
+                                        
+                                    <p>Then, the script opens another csv file "subcategories.csv" in write mode, and again writes the header of the file. For each category, it loops through each subcategory, extract the id, internal id, name, link, and the category id the subcategory belongs to, and writes it to the subcategories csv file.</p>
+                                        
+                                    <p>This script is useful for anyone who wants to extract information about job categories and subcategories from the "drushim.co.il" website and save it to a CSV file for further analysis or use.<p>This code can be used to create a data warehouse, where the factListing table serves as a central fact table, and all other tables are dimension tables. This structure will enable efficient querying and analysis of the data.</p>
+                                    <br>
+                                    <h3>Getting Job listings data</h3>
+                                    <p><a href ='https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/extract/extract.py'><u>This script</u></a> is used to scrape job listings from the website "drushim.co.il" and store them in a CSV file. The script begins by defining several functions that will be used later in the script. The "strip_replace" function is used to clean up text strings by stripping them of surrounding spaces and replacing any commas or quotes with other characters. The "listing2list" function takes in a job listing from the website and extracts relevant information, such as the job title, company name, and location, and returns a string that can be inserted into a CSV file.</p>
+
+                                    <p>The script then uses the "requests" and "BeautifulSoup" libraries to fetch the page containing the job categories and parse the HTML.</p>
+                                        
+                                    <p>The script then uses the Selenium library to load the job listings pages and measure the time it takes to load each page. The script then uses the previously defined functions to extract relevant information from the job listings and writes this information to a "job_listings.csv" file.</p>
+                                        
+                                    <p>The script is set to run daily using the cron job scheduler, which is a system utility that allows you to schedule tasks to run automatically at specified intervals. This script is useful for keeping track of new job listings that are added to the website on a regular basis.</p>
+															
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Israel</p>
+							</section>
+	
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">nikolay.duhman@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+		
+									<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
