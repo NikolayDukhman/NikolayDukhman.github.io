@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Extract data</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">c</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Portfolio</a></li>
+						</ul>
+						<ul class="icons">
+						
+							<li><a href="https://github.com/NikolayDukhman" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">January 17, 2023</span>
+									<h1>Scraping data</h1></header>
+                                    <h3>Loading data to the tables</h3>
+									
+									<a href ='https://github.com/NikolayDukhman/IsraelJobMarketAnalysis/blob/main/python/load/load.py'><u>This code</u></a> reads data from a CSV file and inserts it into a PostgreSQL database. The script is divided into several functions, each of which performs a specific task.
+
+The first function, read_and_insert_sql, is used to insert data into a specific table in the database. It takes three parameters: a connection object, a cursor object, and a row of data. The function first retrieves all the data from the table, and then checks if the last value in the list of values passed to the function is already in the table. If it is not, the function creates an SQL query with the number of placeholders equal to the number of values and executes it, inserting the data into the table. The function then returns the index of the last value inserted, plus one.
+
+The second function, getDateValues, is used to get the ID of a specific date in the dimDate table. It takes a date in the format "dd/mm/yyyy" as input and first retrieves all the data from the table. If the date is not already in the table, the function splits the date into its components, calculates the year_id, weekday_id, and quarter_id, and then inserts the date along with these values into the table. The function then returns the index of the date inserted, plus one.
+
+The third function, row2db, is used to insert rows of data from the dataframe into the database. It takes a row of data as input and calls the first two functions to get the IDs of the location, company, experience, position_type, and date. The function then checks if the job listing already in the "listingFacts" table, if not it inserts the data into the table.
+
+The last lines of code set the working directory to the location of the script, read the data from a CSV file, create a connection to the PostgreSQL database and a cursor object, and loop through the dataframe, calling the row2db function to insert each row of data into the database.
+
+This script is useful for automating the process of loading data into a PostgreSQL database from a CSV file. By using functions, the script is also easy to maintain and re-use for similar data loading tasks.															
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Israel</br>
+							Harish, HaTzafon</p>
+							</section>
+	
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">nikolay.duhman@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+		
+									<li><a href="https://github.com/NikolayDukhman/IsraelJobMarketAnalysis" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
